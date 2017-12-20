@@ -6,9 +6,6 @@
 
     "editor.fontFamily":  "'Ubuntu Mono', Monaco, Menlo, Consolas, source-code-pro, monospace",
 
-    // 已更新文件的自动保存
-    "files.autoSave": "onFocusChange",
-
     // 光标样式
     "editor.cursorStyle": "block",
 
@@ -22,6 +19,12 @@
     "editor.renderIndentGuides": true,
 
     "editor.renderLineHighlight": "all",
+
+    // 按tab插入空格
+    "editor.insertSpaces": true,
+
+    // 按tab插入空格数量为2个空格
+    "editor.tabSize": 2,
 
     // html设置
     // 缩进 <head> 和 <body> 部分。
@@ -42,12 +45,16 @@
 
     // 选择器不应包含 ID，因为这些规则与 HTML 的耦合过于紧密。
     "css.lint.idSelector": "warning",
+
     "window.zoomLevel": 1,
     "extensions.ignoreRecommendations": true,
 
     // 终端, 使用git bash
     "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
     "workbench.colorTheme": "Sublime Material Theme - Dark",
+    
     // 使用\n(LF) unix换行符
-    "files.eol": "\n"
+    "files.eol": "\n",
+    // 已更新文件的自动保存
+    "files.autoSave": "onFocusChange"
 }
