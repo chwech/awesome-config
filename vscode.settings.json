@@ -1,0 +1,53 @@
+// 将设置放入此文件中以覆盖默认设置
+{
+    // 编辑器设置
+    // 字体大小
+    "editor.fontSize": 18,
+
+    "editor.fontFamily":  "'Ubuntu Mono', Monaco, Menlo, Consolas, source-code-pro, monospace",
+
+    // 已更新文件的自动保存
+    "files.autoSave": "onFocusChange",
+
+    // 光标样式
+    "editor.cursorStyle": "block",
+
+    // 显示minimap
+    "editor.minimap.enabled": true,
+
+    // 通过使用鼠标滚轮同时按住 Ctrl 可缩放编辑器的字体
+    "editor.mouseWheelZoom": true,
+
+    // 控制编辑器是否应呈现缩进参考线
+    "editor.renderIndentGuides": true,
+
+    "editor.renderLineHighlight": "all",
+
+    // html设置
+    // 缩进 <head> 和 <body> 部分。
+    "html.format.indentInnerHtml": true,
+
+    // css设置
+    // 使用供应商特定前缀时，确保同时包括所有其他供应商特定属性
+    "css.lint.compatibleVendorPrefixes": "warning",
+
+    // 零不需要单位
+    "css.lint.zeroUnits": "warning",
+
+    // 避免使用 !important。它表明整个 CSS 的特异性已经失去控制且需要重构。
+    "css.lint.important": "warning",
+
+    // 避免使用“float”。浮动会带来脆弱的 CSS，如果布局的某一方面更改，将很容易破坏 CSS。
+    "css.lint.float": "warning",
+
+    // 选择器不应包含 ID，因为这些规则与 HTML 的耦合过于紧密。
+    "css.lint.idSelector": "warning",
+    "window.zoomLevel": 1,
+    "extensions.ignoreRecommendations": true,
+
+    // 终端, 使用git bash
+    "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
+    "workbench.colorTheme": "Sublime Material Theme - Dark",
+    // 使用\n(LF) unix换行符
+    "files.eol": "\n"
+}
