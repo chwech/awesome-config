@@ -2,7 +2,7 @@
 {
     // 编辑器设置
     // 字体大小
-    "editor.fontSize": 18,
+    "editor.fontSize": 12,
 
     "editor.fontFamily":  "'Ubuntu Mono', Monaco, Menlo, Consolas, source-code-pro, monospace",
 
@@ -50,8 +50,8 @@
     "extensions.ignoreRecommendations": true,
 
     // 终端, 使用git bash
-    "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
-    "workbench.colorTheme": "Sublime Material Theme - Dark",
+    "terminal.external.windowsExec": "D:\\Git\\bin\\bash.exe",
+    "terminal.integrated.shell.windows": "D:\\Git\\bin\\bash.exe",
     
     // 使用\n(LF) unix换行符
     "files.eol": "\n",
