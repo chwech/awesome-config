@@ -1,0 +1,147 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// 弹窗组件
+	"wp-dialog-window": {
+		// "scope": "javascript,typescript",
+		"prefix": "wpdw",
+		"body": [
+			"<wp-dialog-window",
+				":show=\"show\"",	
+				"@close-pop-up=\"close\"" ,
+				"@submit-pop-up=\"submit\"",
+				"title=\"文件搜索\">",
+			"</wp-dialog-window>",
+		],
+		"description": "<wp-dialog-window></wp-dialog-window>"
+	},
+	// 表格组件
+	"wp-table": {
+		"prefix": "wpt",
+		"body": [
+			"<wp-table",
+				"height=\"100%\"",
+				":data=\"data\"",
+				":detail-more-columns=\"detailMoreColumns\"",
+				"@row-click=\"tableRowClick\"",
+				"@row-dblclick=\"tableRowDbClick\">",
+				"<el-table-column",
+					"type=\"index\"",
+					"align=\"center\"",
+					"label=\"序号\">",
+				"</el-table-column>",
+				"<el-table-column",
+					"prop=\"deptName\"",
+					"align=\"center\"",
+					"label=\"合同的/机构部门\"",
+					"min-width=\"150\">",
+				"</el-table-column>",
+			"</wp-table>",
+		],
+		"description": "<wp-table></wp-table>"
+	},
+	// 树列表组件
+	"el-table-tree-column": {
+		"prefix": "elttc",
+		"body": [
+			"<el-table-tree-column",
+				"file-icon=\"icon icon-file\"  folder-icon=\"icon icon-folder\"",
+				"treeKey=\"roleid\" parentKey=\"parent\"",
+				"prop=\"name\"", 
+				"label=\"角色\"",
+				":show-overflow-tooltip=\"true\"",
+				"min-width=\"300\"",
+				":indent-size=\"20\"",
+				":expandFun=\"expandFun\">",
+			"</el-table-tree-column>",
+		],
+		"description": "<el-table-tree-column></el-table-tree-column>"
+	},
+	// 上传组件
+	"upload": {
+		"prefix": "wpu",
+		"body": [
+			"<upload",
+				"@handleDialog=\"handleUploadDialog\"",
+				":title=\"uploadConfig.title\"",
+				":showDialog=\"uploadConfig.showDialog\"",
+				":query=\"uploadConfig.queryData\"",
+				":btnSingle=\"uploadConfig.single\"",
+				":templateDownload=\"uploadConfig.templateDownload\"",
+				":templateDownloadUrl=\"uploadConfig.templateDownloadUrl\">",
+			"</upload>"
+		],
+		"description": "<upload></upload>"
+	},
+	// 上传配置对象
+	"upload-config": {
+		"prefix": "uploadc",
+		"body": [
+			"uploadConfig: {",
+				"showDialog: false,",
+				"single: true,",
+				"title: '标题',",
+				"templateDownload: true,",
+				"templateDownloadUrl: '',",
+				"queryData: {",
+					"tag: 'printTemplatePath',",
+          "savePath: '',",
+         	"fileType: '',",
+          "serviceName: '',",
+          "methodName: ''",
+				"}",
+			"},"
+		],
+		"description": "upload组件配置对象"
+	},
+	// 按钮组组件
+	"wp-button-group": {
+		"prefix": "wpbg",
+		"body": [
+			"<wp-button-group", 
+				":allDatas=\"buttonDatas\"",
+				"class=\"wp-button-group\">",
+			"</wp-button-group>",
+		],
+		"description": "<wp-button-group></wp-button-group>"
+	},
+	// 按钮组数据
+	"button-data": {
+		"prefix": "btnd",
+		"body": [
+			"buttonDatas () {",
+				"return [",
+					"{",
+						"name: \"刷新\",",
+						"icon: \"refresh\",",
+						"clickHandle: this.searchProj,",
+					"},",
+				 "{",
+						"name: \"新增项目\",",
+						"icon: \"add\",",
+						"clickHandle: this.addNew",
+					"},",
+					"{",
+						"name: \"修改\",",
+						"authorization: \"EAMSProj:btneditproj\",",
+						"disabled: !(this.canEdit && !this.fromGpallas),",
+						"icon: \"edit\",",
+						"clickHandle: this.modify",
+					"},",
+					"{",
+						"name: \"删除\",",
+						"authorization: \"EAMSProj:btndeleteproj\",",
+						"disabled: !(this.canEdit && !this.fromGpallas),",
+						"icon: \"delete\",",
+						"clickHandle: this.deletedata",
+					"}",
+				"];",
+			"}",
+		],
+		"description": "按钮组数据"
+	},
+}
