@@ -7,8 +7,8 @@
 	"el-messagebox-confirm": {
 		"prefix": "elco",
 		"body": [
-			"this.$confirm(\"新增成功, 是否继续?\", \"提示\", {",
-				"type: \"success\",",
+			"this.$$confirm(\"新增成功, 是否继续?\", \"询问\", {",
+				"type: \"warning\",",
 				"// 点击遮罩不关闭窗口",
 				"closeOnClickModal: false,",
 				"// 倒计时",
@@ -18,8 +18,30 @@
 			"})",
 			".catch(() => {",
 				"$2",
-			"});",
+			"})",
 		],
 		"description": "$confirm确认框"
+	},
+	// 表单验证模板代码
+	"el-form-validate": {
+		"prefix": "elv",
+		"body": [
+			"this.$refs[formName].validate(valid => {",
+				"if (valid) {",
+					"$1",
+				"} else {",
+					"return false",
+				"}",
+			"})",
+		],
+		"description": "this.$refs.form.validate表单验证"
+	},
+
+	"message-box-success": {
+		"prefix": "elms",
+		"body": [
+			"this.$$message.success('刷新成功！')"
+		],
+		"description": "this.$message.success成功提示"
 	},
 }

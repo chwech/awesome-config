@@ -79,7 +79,7 @@
 	},
 	// 上传配置对象
 	"upload-config": {
-		"prefix": "uploadc",
+		"prefix": "wpuc",
 		"body": [
 			"uploadConfig: {",
 				"showDialog: false,",
@@ -109,9 +109,20 @@
 		],
 		"description": "<wp-button-group></wp-button-group>"
 	},
+	// 右键菜单组件
+	"wp-context-menu": {
+		"prefix": "wpcm",
+		"body": [
+			"<wp-context-menu", 
+				":toolbarDatas=\"buttonDatas\"",
+				"ref=\"contextMenu\">",
+			"</wp-context-menu>",
+		],
+		"description": "<wp-context-menu></wp-context-menu>右键菜单"
+	},
 	// 按钮组数据
 	"button-data": {
-		"prefix": "btnd",
+		"prefix": "wpbd",
 		"body": [
 			"buttonDatas () {",
 				"return [",
@@ -138,10 +149,122 @@
 						"disabled: !(this.canEdit && !this.fromGpallas),",
 						"icon: \"delete\",",
 						"clickHandle: this.deletedata",
-					"}",
-				"];",
+					"},",
+				"]",
 			"}",
 		],
 		"description": "按钮组数据"
 	},
+	// 排序窗口组件
+	"list-sort-window": {
+		"prefix": "wplsw",
+		"body": [
+			"<list-sort-window",
+				":show=\"show\"", 
+				"@close=\"show = false\"",
+				":tableOptions=\"tableOptions\">",
+			"</list-sort-window>",
+		],
+		"description": "<list-sort-window></list-sort-window>排序窗口组件"
+		
+	},
+	// 表单验证规则
+	"el-form-rules": {
+		"prefix": "elfr",
+		"body": [
+			"rules: {",
+				"key: this.$$PublicValidator.requiredValidator(\"string\"),",
+			"},"
+		],
+		"description": "rules表单验证规则"
+	},
+	// wp-input组件
+	"wp-input": {
+		"prefix": "wpi",
+		"body": [
+			"<wp-input v-model=\"searchProjName\"  @appendClick=\"searchProj\" elInputWidth=\"100%\" style=\"margin: 0;\" placeholder=\"请输入项目名称\"></wp-input>"
+		],
+		"description": "<wp-input></wp-input>组件"
+	},
+	// 详情框
+	"detail-info-window": {
+		"prefix": "wpdiw",
+		"body": [
+			"<detail-info-window",
+				"v-if=\"detailDialogCfg.showDialog\"",
+				":detailDialogCfg=\"detailDialogCfg\"",
+				"@close=\"detailDialogCfg.showDialog = false\">",
+			"</detail-info-window>",
+		],
+		"description": "<detail-info-window></detail-info-window>组件"
+	},
+		// 详情框配置
+	"detail-info-window-config": {
+		"prefix": "wpdiwc",
+		"body": [
+			"detailDialogCfg: {",
+        "showDialog: true,",
+        "beanData: {",
+          "key: '值',",
+          "key1: '值2'",
+        "},",
+        "detailInfoData: [",
+          "{",
+            "label: '标题',",
+            "property: 'key'",
+          "},",
+          "{",
+            "label: '标题1',",
+            "property: 'key1'",
+          "},",
+        "],",
+      "},",
+		],
+		"description": "详情框配置对象"
+	},
+	// 传json数据使用表单、表格组件
+	"wp-json-form": {
+		"prefix": "wpjf",
+		"body": [
+			"<wp-json-form :forms=\"formsConfig\"></wp-json-form>"
+		],
+		"description": "<wp-json-form></wp-json-form>组件"
+	},
+	// 传json数据使用表单、表格组件配置
+	"wp-json-form-config": {
+		"prefix": "wpjf",
+		"body": [
+			"formsConfig: {",
+				"formSetting: {},",
+				"tableSetting: {},",
+				"formdata: {},",
+				"formItem: [",
+					"{",
+						"Fshow: true,",
+						"Tshow: true,",
+						"prop: 'departmentName',",
+            "label: '单位名称：',",
+            "type: 'input',",
+					"}",
+				"]",
+			"},"
+		],
+		"description": "wp-json-form组件配置"
+	},
+	// wp-work-bench工作台弹窗
+	"wp-work-bench": {
+		"prefix": "wpwb",
+		"body": [
+			"<wp-work-bench title=\"添加案卷\" :show=\"show\" @close=\"show = false\" :table-column=\"tableColumn\"></wp-work-bench>"
+		],
+		"description": "<wp-work-bench></wp-work-bench>工作台弹窗"		
+	},
+	// 开启loading
+	"start-loading": {
+		"prefix": "wpdtl",
+		"body": [
+			"this.$$store.dispatch('doTableLoading', { loadingState: true, index: 0 })"
+		],
+		"description": "开启table loading"		
+	}
 }
