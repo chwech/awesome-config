@@ -5,6 +5,17 @@
 	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
 	// Placeholders with the same ids are connected.
+	// 页面上下布局组件
+	"wp-top-bottom-layout": {
+		"prefix": "wptbl",
+		"body": [
+			"<wp-top-bottom-layout",
+				":tableConfig=\"tableConfig\"",
+				":buttonDatas=\"buttonDatas\">",
+			"</wp-top-bottom-layout>"
+		],
+		"description": "<wp-top-bottom-layout></wp-top-bottom-layout>"
+	},
 	// 弹窗组件
 	"wp-dialog-window": {
 		// "scope": "javascript,typescript",
